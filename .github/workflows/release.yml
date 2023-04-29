@@ -1,5 +1,5 @@
 name: Binary Release
-#on: [push, pull_request]
+on: [push]
 
 permissions:
   issues: write
