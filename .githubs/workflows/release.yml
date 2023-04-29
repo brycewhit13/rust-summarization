@@ -1,0 +1,22 @@
+name: Binary Release
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          components: clippy, rustfmt
+          override: true
+      - name: Build Release
+        run: make build-release
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: release.zip
