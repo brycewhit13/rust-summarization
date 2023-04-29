@@ -1,8 +1,8 @@
-name: Automatic Binary Release
-on:
+name: Binary Release
+on: 
   push:
-    branches: [ main ]
-    tags: [ v*.*.* ]
+    branches: [ master ]
+    tags: [ "v*.*.*" ]
 
 permissions:
   issues: write
@@ -20,8 +20,8 @@ jobs:
           profile: minimal
           components: clippy, rustfmt
           override: true
-      - name: Run Build Release
-        run: make build-release
+      - name: Build Release
+        run: make build-release && zip  -r release.zip target/release/*
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
