@@ -1,11 +1,17 @@
 name: Binary Release
+#on: [push, pull_request]
 
-on: [push, pull_request]
-
+permissions:
+  issues: write
+on:
+  push:
+    tags:
+      - "v*.*.*"
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
@@ -14,8 +20,8 @@ jobs:
           profile: minimal
           components: clippy, rustfmt
           override: true
-      - name: Build Release
-        run: make build-release
+      - name: Run clippy
+        run: make releasex86 && zip  -r release.zip target/release/*
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
