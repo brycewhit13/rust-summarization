@@ -18,3 +18,6 @@ Cargo.lock
 
 /target
 /Cargo.lock
+
+# Ignore release zip file
+release.zip
