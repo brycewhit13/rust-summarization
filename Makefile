@@ -17,3 +17,9 @@ test:
 
 build-release:
 	cargo build --release
+
+docker-pull:
+	docker pull brycewhit13/rust-summarization:latest
+
+docker-run:
+	docker run -d -p 8080:8080 brycewhit13/rust-summarization:latest
