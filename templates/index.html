@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Text Summarization</title>
+    <!-- Link to css file in the resources folder  -->
+    <link rel="stylesheet" href="/static/css/index.css">
+  </head>
+  <body>
+    <p> A microservice where you can summarize text! Enter text that you want summarized into the "text" box, and then click submit to get a summary! </p>
+    <hr> <br><br>
+    <form action="/summary">
+        <!-- Input Text Box -->
+        <label for="text">Text:</label> <br>
+        <textarea type="text", id="text", name="text", rows="16" cols="150" value=""></textarea> <br><br>
+
+        <!-- Summary Output Text Box  -->
+        <!-- <label for="">Summary:</label> <br>
+        <textarea id="summary" name="summary" rows="16" cols="150" READONLY> {% summary_text %}</textarea> <br><br> -->
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit"> <br><br>
+    <form>
+
+  </body>
+</html>
