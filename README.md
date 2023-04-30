@@ -1,7 +1,6 @@
 # Rust Summarization
 
 ![CI/CD Pipeline](https://github.com/brycewhit13/rust-miniprojects/actions/workflows/rust.yml/badge.svg)
-![Tests](https://github.com/brycewhit13/rust-miniprojects/actions/workflows/tests.yml/badge.svg)
 
 ## Description
 
