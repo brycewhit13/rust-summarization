@@ -94,7 +94,7 @@ mod test {
         let text: &str = "";
         let output = summarize_text(text);
 
-        assert_eq!(output, "No summary was provided!");
+        assert_eq!(output, "No text was provided!");
     }
 
     #[test]
