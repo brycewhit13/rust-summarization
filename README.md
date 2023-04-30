@@ -32,4 +32,6 @@ The binary can be downloaded from the [releases page](https://github.com/brycewh
 
 ### Online
 
-The microservice can be accessed [here](https://rust-summarization-bsw31.azurewebsites.net/)
+The microservice can be accessed [here](https://rust-summarization-bsw31.azurewebsites.net/). It was deployed on Azure App Services with the following details:
+
+![Deployment Details](imgs/deployment.png)
