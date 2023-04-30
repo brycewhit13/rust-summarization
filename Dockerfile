@@ -14,4 +14,7 @@ RUN echo "/usr/local/lib" | tee /etc/ld.so.conf.d/usr-local.conf && ldconfig
 # Update the SSL certificate store
 RUN update-ca-certificates
 COPY --from=builder /usr/src/rust-summarization/target/release/rust-summarization /usr/local/bin/rust-summarization
+# Expose the port
+EXPOSE 8080
+
 CMD ["rust-summarization"]

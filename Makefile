@@ -18,8 +18,13 @@ test:
 build-release:
 	cargo build --release
 
+docker-push:
+	docker build -t rust-summarization .
+	docker tag rust-summarization:latest brycewhit13/rust-summarization:latest
+	docker push brycewhit13/rust-summarization:latest
+
 docker-pull:
-	docker pull brycewhit13/rust-summarization:latest
+	docker pull brycewhit13/rust-summarization
 
 docker-run:
 	docker run -d -p 8080:8080 brycewhit13/rust-summarization:latest
