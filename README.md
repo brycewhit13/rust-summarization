@@ -35,3 +35,7 @@ The binary can be downloaded from the [releases page](https://github.com/brycewh
 The microservice can be accessed [here](https://rust-summarization-bsw31.azurewebsites.net/). It was deployed on Azure App Services with the following details:
 
 ![Deployment Details](imgs/deployment.png)
+
+## Testing
+
+If you would like to run unit tests on the functions, simply run the command `make test`. This will run the command `cargo test --quiet`. The tests can be found at the bottom on `src/lib.rs` if you are interested in taking a closer look at them. 
