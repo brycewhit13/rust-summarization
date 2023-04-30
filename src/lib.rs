@@ -48,7 +48,7 @@ pub fn summarize_text(text: &str) -> String {
 
     // Check if the text is empty
     if text.is_empty() {
-        return "No summary was provided!".to_string();
+        return "No text was provided!".to_string();
     }
 
     let model = load_model(min_length, max_length as i64);
