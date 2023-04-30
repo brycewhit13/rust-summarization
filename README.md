@@ -8,6 +8,10 @@ The goal of this project is to create a microservice where someone can input a b
 
 ## Architecture
 
+![Architecture Diagram](imgs/architecture_diagram.png)
+
+The application was developed in [Rust](https://www.rust-lang.org/) using the [Actix Web Framework](https://actix.rs/). It was then deployed to [Azure App Services](https://azure.microsoft.com/en-us/products/app-service/) from a [Docker Container](https://www.docker.com/resources/what-container/#:~:text=A%20Docker%20container%20image%20is,tools%2C%20system%20libraries%20and%20settings.).
+
 ## Running the Program
 
 ### Locally
@@ -27,3 +31,5 @@ The docker container can be found publically available [here](https://hub.docker
 The binary can be downloaded from the [releases page](https://github.com/brycewhit13/rust-summarization/releases). Selecting the most recent release will usually be the safest option.
 
 ### Online
+
+The microservice can be accessed [here](https://rust-summarization-bsw31.azurewebsites.net/)
