@@ -36,6 +36,8 @@ The microservice can be accessed [here](https://rust-summarization-bsw31.azurewe
 
 ![Deployment Details](imgs/deployment.png)
 
+If there are problems with the application, there is a decent chance I have stopped the instance to save myself from losing lots of money on accident. Let me know if this is the case and I'll be happy to get it back up and running. 
+
 ## Testing
 
 If you would like to run unit tests on the functions, simply run the command `make test`. This will run the command `cargo test --quiet`. The tests can be found at the bottom on `src/lib.rs` if you are interested in taking a closer look at them. 
